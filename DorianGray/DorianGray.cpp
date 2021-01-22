@@ -20,6 +20,8 @@ int main()
 
     std::cout << "Enter the number of subjects: \n";
 
+    //There is probably a more elegant way I could do this, BUT
+    //I'm keeping it simple for now.
         if (numOfSubjects == 1)
         {
             finalCharge = 100;
@@ -47,29 +49,28 @@ int main()
 
         else if (numOfSubjects == 6)
         {
-            finalCharge = 100;
+            finalCharge = 180;
         }
 
         else if (numOfSubjects >= 7)
         {
-            finalCharge = 100;
+            finalCharge = 185;
         }
         else
         {
             std::cout << "Not a valid number.\n";
         }
 
-    if (isWeekend == 1)
-    {
-        finalCharge * weekendCharge;
-    }
-    
-    std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
+        std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
 
+        if (isWeekend == 1)
+        {
+            finalCharge * weekendCharge;
+        }  
 
-    std::cout << "For a sitting with 1 subjects,\n";
-    std::cout << "on a weekend, the cost is.\n" + finalCharge;
-    std::cout << "Press any key to continue . . .\n";
+        std::cout << "For a sitting with 1 subjects,\n";
+        std::cout << "on a weekend, the cost is.\n" + finalCharge;
+        std::cout << "Press any key to continue . . .\n";
     
     
 }
