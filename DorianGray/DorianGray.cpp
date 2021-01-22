@@ -6,10 +6,20 @@
 
 int main()
 {
+    //Intro Paragraph
     std::cout << "This program calculates the cost\n";
     std::cout << "of a portrait sitting. The price depends\n";
     std::cout << "on the number of subjects in the portrait\n";
     std::cout << "and day of the week.\n";
+
+    //Text Input Paragraph
+    std::cout << "Enter the number of subjects: \n";
+    std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
+    std::cout << "For a sitting with 1 subjects,\n";
+    std::cout << "on a weekend, the cost is.\n";
+    std::cout << "Press any key to continue . . .\n";
+    
+    
 }
 
 
