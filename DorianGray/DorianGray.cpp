@@ -14,13 +14,61 @@ int main()
 
     int isWeekend = 0;
     double weekendCharge = .20;
-    //save numOfSubjects for later, as that variable is dependant on user input.
+    //change this to a user input variable later.
+    int numOfSubjects = 0;
+    int finalCharge = 0;
 
-    //Text Input Paragraph
     std::cout << "Enter the number of subjects: \n";
+
+        if (numOfSubjects == 1)
+        {
+            finalCharge = 100;
+        }
+
+        else if (numOfSubjects == 2)
+        {
+            finalCharge = 130;
+        }
+
+        else if (numOfSubjects == 3)
+        {
+            finalCharge = 150;
+        }
+
+        else if (numOfSubjects == 4)
+        {
+            finalCharge = 165;
+        }
+
+        else if (numOfSubjects == 5)
+        {
+            finalCharge = 175;
+        }
+
+        else if (numOfSubjects == 6)
+        {
+            finalCharge = 100;
+        }
+
+        else if (numOfSubjects >= 7)
+        {
+            finalCharge = 100;
+        }
+        else
+        {
+            std::cout << "Not a valid number.\n";
+        }
+
+    if (isWeekend == 1)
+    {
+        finalCharge * weekendCharge;
+    }
+    
     std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
+
+
     std::cout << "For a sitting with 1 subjects,\n";
-    std::cout << "on a weekend, the cost is.\n";
+    std::cout << "on a weekend, the cost is.\n" + finalCharge;
     std::cout << "Press any key to continue . . .\n";
     
     
