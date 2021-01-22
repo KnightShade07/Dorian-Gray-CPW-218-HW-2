@@ -12,6 +12,10 @@ int main()
     std::cout << "on the number of subjects in the portrait\n";
     std::cout << "and day of the week.\n";
 
+    int isWeekend = 0;
+    double weekendCharge = .20;
+    //save numOfSubjects for later, as that variable is dependant on user input.
+
     //Text Input Paragraph
     std::cout << "Enter the number of subjects: \n";
     std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
