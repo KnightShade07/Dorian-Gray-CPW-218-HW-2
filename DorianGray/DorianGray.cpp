@@ -3,10 +3,16 @@
 
 #include <iostream>
 
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "This program calculates the cost\n";
+    std::cout << "of a portrait sitting. The price depends\n";
+    std::cout << "on the number of subjects in the portrait\n";
+    std::cout << "and day of the week.\n";
 }
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
