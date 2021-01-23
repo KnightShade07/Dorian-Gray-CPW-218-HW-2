@@ -12,16 +12,19 @@ int main()
     std::cout << "on the number of subjects in the portrait\n";
     std::cout << "and day of the week.\n";
 
-    int isWeekend = 0;
-    double weekendCharge = .20;
-    //change this to a user input variable later.
-    int numOfSubjects = 0;
+    
+    
+    
     int finalCharge = 0;
 
     std::cout << "Enter the number of subjects: \n";
 
-    //There is probably a more elegant way I could do this, BUT
-    //I'm keeping it simple for now.
+    //change this to a user input variable later.
+    int numOfSubjects = 0;
+
+        //There is probably a more elegant way I could do this, BUT
+        //I'm keeping it simple for now.
+
         if (numOfSubjects == 1)
         {
             finalCharge = 100;
@@ -63,13 +66,17 @@ int main()
 
         std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
 
+        int isWeekend = 0;
+        double weekendCharge = .20;
+
         if (isWeekend == 1)
         {
             finalCharge * weekendCharge;
         }  
 
         std::cout << "For a sitting with 1 subjects,\n";
-        std::cout << "on a weekend, the cost is.\n" + finalCharge;
+        std::cout << "on a weekend, the cost is.\n";
+        std::cout << finalCharge;
         std::cout << "Press any key to continue . . .\n";
     
     
