@@ -59,10 +59,7 @@ int main()
         {
             finalCharge = 185;
         }
-        else
-        {
-            std::cout << "Not a valid number.\n";
-        }
+        
 
         std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
 
@@ -74,8 +71,8 @@ int main()
             finalCharge * weekendCharge;
         }  
 
-        std::cout << "For a sitting with 1 subjects,\n";
-        std::cout << "on a weekend, the cost is.\n" << finalCharge;
+        std::cout << "For a sitting with " << numOfSubjects << " subjects,\n";
+        std::cout << "on a weekday, the cost is" << finalCharge << "\n";
         std::cout << "Press any key to continue . . .\n";
     
     
