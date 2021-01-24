@@ -72,7 +72,15 @@ int main()
         }  
 
         std::cout << "For a sitting with " << numOfSubjects << " subjects,\n";
-        std::cout << "on a weekday, the cost is" << finalCharge << "\n";
+        if (isWeekend == 0)
+        {
+            std::cout << "on a weekday, the cost is" << finalCharge << "\n";
+        }
+        else if (isWeekend == 1)
+        {
+            std::cout << "on a weekend, the cost is" << finalCharge << "\n";
+        }
+
         std::cout << "Press any key to continue . . .\n";
     
     
