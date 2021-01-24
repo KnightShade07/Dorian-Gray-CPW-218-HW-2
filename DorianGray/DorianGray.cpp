@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+using std::cin;
 
 
 int main()
@@ -15,12 +16,13 @@ int main()
     
     
     
-    int finalCharge = 0;
+    double finalCharge = 0;
 
     std::cout << "Enter the number of subjects: \n";
 
-    //change this to a user input variable later.
-    int numOfSubjects = 0;
+    
+    int numOfSubjects;
+    cin >> numOfSubjects;
 
         //There is probably a more elegant way I could do this, BUT
         //I'm keeping it simple for now.
@@ -62,23 +64,35 @@ int main()
         
 
         std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
+        int isWeekend;
+        cin >> isWeekend;
 
-        int isWeekend = 0;
-        double weekendCharge = .20;
+        
+        double weekendCharge =  finalCharge * .20;
+        double weekEndBill;
 
         if (isWeekend == 1)
         {
-            finalCharge * weekendCharge;
-        }  
+            weekEndBill = finalCharge + weekendCharge;
+        }
 
-        std::cout << "For a sitting with " << numOfSubjects << " subjects,\n";
+        //This will check for the number of subjects in the photo session,
+        //and modify the output accordingly.
+        if (numOfSubjects == 1) {
+            std::cout << "For a sitting with " << numOfSubjects << " subject,\n";
+        }
+        else if (numOfSubjects > 1) {
+            std::cout << "For a sitting with " << numOfSubjects << " subjects,\n";
+        }
+        
+
         if (isWeekend == 0)
         {
-            std::cout << "on a weekday, the cost is" << finalCharge << "\n";
+            std::cout << "on a weekday, the cost is $" << finalCharge << "\n";
         }
         else if (isWeekend == 1)
         {
-            std::cout << "on a weekend, the cost is" << finalCharge << "\n";
+            std::cout << "on a weekend, the cost is $" << weekEndBill << "\n";
         }
 
         std::cout << "Press any key to continue . . .\n";
