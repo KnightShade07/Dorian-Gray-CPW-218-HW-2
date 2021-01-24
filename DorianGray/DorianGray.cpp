@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+using std::cin;
 
 
 int main()
@@ -12,16 +13,89 @@ int main()
     std::cout << "on the number of subjects in the portrait\n";
     std::cout << "and day of the week.\n";
 
-    int isWeekend = 0;
-    double weekendCharge = .20;
-    //save numOfSubjects for later, as that variable is dependant on user input.
+    
+    
+    
+    double finalCharge = 0;
 
-    //Text Input Paragraph
     std::cout << "Enter the number of subjects: \n";
-    std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
-    std::cout << "For a sitting with 1 subjects,\n";
-    std::cout << "on a weekend, the cost is.\n";
-    std::cout << "Press any key to continue . . .\n";
+
+    
+    int numOfSubjects;
+    cin >> numOfSubjects;
+
+        //There is probably a more elegant way I could do this, BUT
+        //I'm keeping it simple for now.
+
+        if (numOfSubjects == 1)
+        {
+            finalCharge = 100;
+        }
+
+        else if (numOfSubjects == 2)
+        {
+            finalCharge = 130;
+        }
+
+        else if (numOfSubjects == 3)
+        {
+            finalCharge = 150;
+        }
+
+        else if (numOfSubjects == 4)
+        {
+            finalCharge = 165;
+        }
+
+        else if (numOfSubjects == 5)
+        {
+            finalCharge = 175;
+        }
+
+        else if (numOfSubjects == 6)
+        {
+            finalCharge = 180;
+        }
+
+        else if (numOfSubjects >= 7)
+        {
+            finalCharge = 185;
+        }
+        
+
+        std::cout << "Will the sitting be on a weekend? (0=no, 1=yes): \n";
+        int isWeekend;
+        cin >> isWeekend;
+
+        
+        double weekendCharge =  finalCharge * .20;
+        double weekEndBill;
+
+        if (isWeekend == 1)
+        {
+            weekEndBill = finalCharge + weekendCharge;
+        }
+
+        //This will check for the number of subjects in the photo session,
+        //and modify the output accordingly.
+        if (numOfSubjects == 1) {
+            std::cout << "For a sitting with " << numOfSubjects << " subject,\n";
+        }
+        else if (numOfSubjects > 1) {
+            std::cout << "For a sitting with " << numOfSubjects << " subjects,\n";
+        }
+        
+
+        if (isWeekend == 0)
+        {
+            std::cout << "on a weekday, the cost is $" << finalCharge << "\n";
+        }
+        else if (isWeekend == 1)
+        {
+            std::cout << "on a weekend, the cost is $" << weekEndBill << "\n";
+        }
+
+        std::cout << "Press any key to continue . . .\n";
     
     
 }
