@@ -75,8 +75,7 @@ int main()
         }  
 
         std::cout << "For a sitting with 1 subjects,\n";
-        std::cout << "on a weekend, the cost is.\n";
-        std::cout << finalCharge;
+        std::cout << "on a weekend, the cost is.\n" << finalCharge;
         std::cout << "Press any key to continue . . .\n";
     
     
